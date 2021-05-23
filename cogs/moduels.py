@@ -83,14 +83,14 @@ class hacking_modules:
         ).text.strip('"')
 
         if out == '{"message": "Internal server error"}':
-            embed = self.get_embed("Failed", "Ciphey Broke", "Server error 😕")
+            embed = self.get_embed("Failed", "Took too long to decrypt!", "Try the CLI version instead https://github.com/ciphey/ciphey 😕")
         elif out == "Failed to crack":
             embed = self.get_embed(
                 "Failed", "Ciphey could not decrypt this text", "Failed 😕"
             )
         else:
             embed = self.get_embed(
-                "Success", "Ciphey possible decryped this text", "Success 👍"
+                "Success", "Ciphey decrypted this text", "Success 👍"
             )
             embed.add_field(name="Result:", value=out)
 
